@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document 2</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+    </head>
+    <body>
+        Email:<p type="email" id="email"></p><br>
+        Nome:<p id="name"></p><br>
+        Sobrenome<p id="lastname"></p><br>
+        Avatar:<p src="images.png" id="avatar"></p>
+        Número:<input type="number" id="num">
+        
+        <button id="btn" onclick="requisita()">Requisitar</button>
+        <p id="erro"></p>
+        <script>
+        let numero = $('#num').val();
+        function requisita(){
+            $.ajax({
+            type: 'GET',
+            url: 'https://reqres.in/api/users/'+`${numero}`,
+            success: function(dados) {
+                $('#email').append(dados.data.email);
+                $('#name').append(dados.data.first_name);
+                $('#lastname').append(dados.data.last_name);
+                $('#avatar').attr('src', dados.data.avatar);
+            },
+            error: function(dados) {
+                $('#erro').text("Erro ao carregar o API");
+        }
+    })};
+        </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!--
+    3. Crie um formulário com campos para nome e profissão e um botão. Quando o botão for clicado,
+    deve ser enviada uma requisição para a criação desse usuário (referência: CREATE). Após a criação, 
+    deve ser informado ao usuário o ID do usuário recém-criado, 
+    assim como a confirmação do nome e profissão, tais como recebidos do servidor.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>Document 3</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <form>
+        Nome: <p id="nome"></p>
+        Profissão: <p id="prof"></p>
+        <p id="no"></p>
+        <p id="pr"></p>
+       
+        <button onclick="req()">Ok</button>
+    </form>
+    <script>
+        function req(){
+            $.ajax({
+            type: 'POST',
+            url: 'https://reqres.in/',
+            url: 'https://reqres.in/api/users',
+            data:{"name": $("#nome").val(),
+                    "job": $("#prof").val(),
+        },
+            success: function(dados) {
+            $("#no").text(dados.name)
+                $("#pr").text(dados.job)
+            },
+            error: function(){
+                $("#no").html("Erro")
+            }
+            });
+
+        }
+    </script>
+</body>
+</html>

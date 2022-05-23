@@ -1,0 +1,35 @@
+<!--
+    4. Crie formulário com um campo numérico e um botão. Ao clicar no botão, deve ser enviada uma requisição para que o usuário com aquele ID seja 
+    excluído (referência: DELETE). Caso seja retornado o código de status 204, 
+    deve ser avisado ao usuário que a exclusão foi realizada com sucesso. Do contrário, que houve um erro ao tentar realizar a operação.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document4</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+        <form>
+                <input type="number" id="num">
+                <button onclick="req()">Ok</button>
+            </form>
+            <script>
+                function req(){
+                    $.ajax({
+                    type: 'GET',
+                    url: 'https://reqres.in/api/users',
+                    data:{"name": $("#")}
+                    success: function(dados) {
+                    // dados será um objeto interpretado a
+                    // partir do JSON retornado pelo servidor
+                    },
+                    dataType: 'json'
+                    });
+        
+                }
+            </script>
+</body>
+</html>

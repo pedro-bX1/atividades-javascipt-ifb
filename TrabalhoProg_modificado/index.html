@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="pt-br">
+	<title>Casa Italiana</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js">
+	</script>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+
+<body style="background-color:#33FA40";>
+	
+	<p id="topo" align="right" style="background-color:#EB2121";>
+		<font size="4" color="#45D0EB">
+			<a href="#">Home</a>
+			<a href="#maispedidos">Mais Pedidos</a>
+			<a href="#cardapio">Cardápio</a>
+			<a href="#reservas">Reservas</a>
+	</p>
+	</font>
+	<hr />
+
+	<font face="Arial Narrow" color="#e23b12" size="5">
+		<center>
+			<h1>Casa Italiana</h1>
+		</center>
+	</font>
+
+	<img src="public/imagens/comida2.jpg" width="350px" height="350px" />
+
+	<img src="public/imagens/comida4.jpg" width="350px" height="350px" />
+	<img src="public/imagens/comida5.jpg" width="350px" height="350px" />
+	<img src="public/imagens/comida6.jpg" width="350px" height="350px" />
+
+	<font face="Arial Narrow" color="#e23b12" size="5">
+		<center><h2 id="maispedidos">Mais Pedidos</h2></center>
+	</font>
+	<hr />
+
+	<ol type="I">
+		<li>Bruschetta</li>
+		<li>Tortellini de Bolonha</li>
+		<li>Calzone</li>
+		<li>Gelato</li>
+		<li>Spaguetti</li>
+	</ol>
+
+
+	<font face="Arial Narrow" color="#e23b12" size="5">
+	<center><h2 id="cardapio">Cardápio</h2></center>
+	</font>
+	<hr />
+
+	<p>
+		Conheça mais sobre os nossos deliciosos pratos:
+	</p>
+
+	<table border="1">
+		<tr>
+			<td colspan="5" align="center">Clique nos botões abaixo para ver detalhes</td>
+		</tr>
+		<tr>
+			<td><div class='bru'>a</div></td>
+
+			<td><div class='torte'></div></td>
+
+			<td><div class='cal'></div></td>
+
+			<td><div class='gelato'></div></td>
+
+			<td><div class='spague'></div></td>
+
+
+		</tr>
+		<tr>
+			<td><div class='bru'></div></td>
+
+			<td><div class='torte'></div></td>
+
+			<td><div class='cal'></div></td>
+
+			<td><div class='gelato'></div></td>
+
+			<td><div class='spague'></div></td>
+		</tr>
+
+		<tr>
+			<td><button class="myButton" onclick="verBru()">Bruschetta</button></td>
+			<td><button class="myButton" onclick="verTortellini()">Tortellini</button></td>
+			<td><button class="myButton" onclick="verCalzone()">Calzone</button></td>
+			<td><button class="myButton" onclick="verGelato()">Gelato</button></td>
+			<td><button class="myButton" onclick="verSpaguetti()">Spaguetti</button></td>
+		</tr>
+
+
+	</table>
+	<form></form>
+
+	<font face="Arial Narrow" color="#e23b12" size="5">
+		<center><h2 id="reservas">Cadastrar</h2></center>
+	</font>
+
+		<p><label for="">Nome: </label>
+			<input class="imput" type="text" id="nome_prato"></p>
+
+		<p><label for="">Quantidade: </label>
+			<input class="imput" type="number" name="" id="quantidade_prato">
+		</p>
+
+		
+		<p>
+			<label> Valor: </label>
+			<input class="imput" type="number" name="" id="valor_prato">
+		</p>
+
+		<p>
+			<button class="myButton" onclick="cadastrarPrato()">Cadastrar</button>
+			<button class="myButton" onclick="atualizarPrato()">Atualizar</button>
+			<button class="myButton" onclick="excluirPrato()">Excluir</button>
+			<button class="myButton" onclick="visualizarPrato()">Visualizar pratos</button>
+		</p>
+	
+		<p id="tabela_pratos"></p>
+	</form>
+	<p align="right"><a href="#topo">Voltar ao topo</a></p>
+	<hr />
+	<script src="script/codigo.js"></script>
+
+</body>
+
+</html>

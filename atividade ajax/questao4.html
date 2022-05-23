@@ -1,0 +1,44 @@
+<!--
+    4. Modifique o código anterior para usar $.ajax(...) ao invés de load(...), sem alterar o funcionamento da página.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest4</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+</script>
+</head>
+<body> 
+    <p></p>   
+    <input type="number" id="numero">
+    <div id="aqui">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Reprehenderit minima corrupti iste quisquam. Accusamus, nesciunt, asperiores molestiae consequatur nostrum doloremque, amet atque natus omnis ipsam illo non culpa. Repudiandae, tempore?
+    </div>
+    
+    <button onclick="cont()">
+        CLICK
+    </button>
+    <script>
+        function cont(){
+            $('p').html('Carregando...');
+            let num = $('#numero').val();
+
+            $.ajax({
+            type: 'GET',
+            url: 'http://numbersapi.com/'+num,
+            success: function(dados) {
+                $('#aqui').html(dados);
+                $('p').html('Pronto!');
+
+            },
+            error: function(dados) {
+                $('p').html('Erro! Não foi possível carregar a página, tente novamente mais tarde.');
+            }
+            });
+        }
+    </script>
+</body>
+</html>

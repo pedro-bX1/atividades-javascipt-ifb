@@ -1,0 +1,31 @@
+<!--2. Acrescente à página anterior um elemento para que o usuário possa selecionar um número qualquer. Quando o botão for clicado, 
+    deve ser carregado o conteúdo da URL http://numbersapi.com/N, onde N é o número selecionado pelo usuário.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest1</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+</script>
+</head>
+<body>
+    <input type="number" id="numero">
+    <div id="aqui">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Vero laudantium adipisci ducimus tempora minus, mollitia sint at ipsam pariatur, 
+        voluptas provident omnis odit obcaecati recusandae excepturi exercitationem accusamus nisi quia?
+    </div>
+    <button onclick="cont()">
+        CLICK
+    </button>
+    
+    <script>
+        function cont(){
+            let num = $('#numero').val();
+            $('#aqui').load("http://numbersapi.com/"+num);
+        }
+        
+    </script>
+</body>
+</html>

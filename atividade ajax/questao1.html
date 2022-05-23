@@ -1,0 +1,25 @@
+<!--1. Escreva uma página com um div e um botão. Quando o botão for clicado, o conteúdo da URL http://numbersapi.com/8 deve ser carregado no div.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest1</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+</script>
+</head>
+<body>
+    <div id="aqui">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Vero laudantium adipisci ducimus tempora minus, mollitia sint at ipsam pariatur, 
+        voluptas provident omnis odit obcaecati recusandae excepturi exercitationem accusamus nisi quia?
+    </div>
+    <button onclick="cont()">
+        Botão 1
+    </button>
+    <script>
+        function cont(){
+            $('#aqui').load('http://numbersapi.com/8');
+        }
+    </script>
+</body>
+</html>

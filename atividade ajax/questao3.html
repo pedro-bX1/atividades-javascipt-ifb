@@ -1,0 +1,39 @@
+<!--
+    3. Modifique a página anterior para que, imediatamente após o botão ser clicado, seja exibido em algum lugar da tela o texto "Carregando...". 
+    Quando o conteúdo tiver terminado de ser carregado, esse texto deve mudar para "Pronto!";
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest3</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+</script>
+</head>
+<body>
+    <p></p>
+    <input type="number" id="numero">
+    <div id="aqui">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Vero laudantium adipisci ducimus tempora minus, mollitia sint at ipsam pariatur, 
+        voluptas provident omnis odit obcaecati recusandae excepturi exercitationem accusamus nisi quia?
+    </div>
+    
+    <button onclick="cont()">
+        CLICK
+    </button>
+    <script>
+        function cont(){
+            let num = $('#numero').val();
+
+            $('p').html('Carregando...');
+            $('#aqui').load("http://numbersapi.com/"+num,
+            function() {
+                $('p').html('Pronto!');
+            }
+            );
+        }
+    </script>
+</body>
+</html>

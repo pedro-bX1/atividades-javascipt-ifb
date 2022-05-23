@@ -1,0 +1,48 @@
+<!--
+5. Adicione alguns elementos <span> no meio dos parágrafos da página anterior. Crie uma nova classe CSS chamada destaque com algumas propriedades visuais (por exemplo, cor de plano de fundo). 
+Adicione um botão à página anterior que, ao ser clicado, aplique essa classe a todos os elementos span.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest5</title>
+    <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+    .destaque{
+        color: aqua;
+        font-size: 100px  
+    }
+    </style>
+</head>
+<body>
+    <p>Paragrafo 1</p>
+    <span>001</span>
+    <p>Paragrafo 2</p>
+    <span>002</span>
+    <p>Paragrafo 3</p>
+    <span>003</span>
+    <p>Paragrafo 4</p>
+    <span>004</span>
+    <p>Paragrafo 5</p>
+    <span>005</span>
+    <p>Paragrafo 6</p>
+    <span>006</span>
+    <p>Paragrafo 7</p>
+    <span>007</span>    
+    <p>Paragrafo 8</p>
+    <span>008</span>
+    <p>Paragrafo 9</p>
+    <button onclick="mudar()">Mudar SPANS</button>
+    <script>
+            $('p').on('click', function(e) {
+                $(this).css('color', '#E8C84D')
+            });
+            function mudar() {                
+                $('span').addClass('destaque');
+            };                 
+     </script>
+
+</body>
+</html>

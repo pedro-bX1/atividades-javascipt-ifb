@@ -1,0 +1,73 @@
+<!--
+1-Refaça os exercício 3, 4 e 5 da lista anterior utilizando seletores JQuery.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <title>Quest1</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+        <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <h1 id="mudar">Programação para Internet 1</h1>
+    <p>Bem vindo, <span id="nomeaqui"></span>!</p>
+    <p id="ep">Esse é o texto do segundo parágrafo</p>
+    <p><img id="imagem" src="https://upload.wikimedia.org/wikipedia/pt/4/4e/Goomba.png" style="width:120px"></p>
+    <button onclick="funcao()">Muda conteúdo</button>
+    <script>
+            function funcao() {
+                $("#mudar").text("Programação para Internet 2");
+                $("#nomeaqui").text("Pedro");
+                $("#ep").text("Este não é mais o texto do segundo parágrafo");
+                $("#imagem").attr('src', "data:image/png;base64,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");
+            }
+    </script>
+
+    </br>
+
+    
+     <div id="paragrafos">
+     <p id="primeirao">
+        Esse é o primeiro parágrafo</p>
+     <p>Esse é o segundo paragrafo</p>
+     </div>
+     <button onclick="adiciona()">Adicionar</button>
+     <script>
+         function adiciona(){
+            let p = $('<p>Este é o 3 parágrafo</p>');
+
+            let div = $('#paragrafos');
+            div.append(p);
+    }
+     </script>
+    </body>
+ 
+
+</br>
+
+<h1>Programação para Internet 1</h1>
+    <p>Este é o primeiro parágrafo</p>
+    <p>Este é o segundo parágrafo</p>
+    <span id="ref1"></span><p>Este parágrafo deve ser removido (1)</p>
+
+    <div id="conteudo" style="border: 1px solid blueviolet">
+        <p>Este parágrafo deve ser removido (2) <span id="ref2">!</span> </p>
+        <p>Último parágrafo</p>
+    </div>
+    <script>
+    function remover(){
+        var el = $('#ref1');
+        el.next().remove();
+    }
+    function remover2(){
+        var el = $('#ref2');
+        el.parent().remove();
+    }
+    </script>
+    <button onclick="remover()">Remover 1</button>
+    <button onclick="remover2()">Remover 2</button>
+
+
+    </body>
+</html>

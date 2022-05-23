@@ -1,0 +1,36 @@
+<!--
+9. Acresente mais três botões ao código. Ao ser clicados, devem realizar as seguintes operações no elemento de id titulo: 
+(o código não deve criar novos elementos, apenas alterar o texto)
+
+Acrescentar uma string ao final do texto
+Acrescentar uma string ao início do texto
+Limpar o texto
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest9</title>
+    <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <h1 id="id">Título</h1>
+    <button  onclick="add()">Acrescentar início</button>
+    <button onclick="add2()">Acrescentar final</button>
+    <button onclick="limpar()">Apagar Texto</button>
+    <script>
+        function add(){
+        let novop = $('<p>Novo parágrafo</p>');
+        $('#id').prepend(novop);
+        }
+        function add2(){
+        let novp = $('<p>Novo parágrafo</p>');
+        $('#id').append(novp);
+        }
+        function limpar(){
+            $('#id').remove();
+        }
+    </script>
+</body>
+</html>

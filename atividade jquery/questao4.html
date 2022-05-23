@@ -1,0 +1,30 @@
+<!--
+4. Crie uma página com vários parágrafos. Cada parágrafo, ao ser clicado, deve ter a cor da fonte modificada (acrescente o evento em um único comando JQuery para todos os elementos p).
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest4</title>
+    <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <p>Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+    <p>Paragrafo 4</p>
+    <p>Paragrafo 5</p>
+    <p>Paragrafo 6</p>
+    <p>Paragrafo 7</p>
+    <p>Paragrafo 8</p>
+    <p>Paragrafo 9</p>
+
+    <script>
+            $('p').on('click', function(e) {
+                $(this).css('color', '#E8C84D')
+             });
+     </script>
+
+</body>
+</html>

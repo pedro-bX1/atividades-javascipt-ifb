@@ -1,0 +1,30 @@
+<!--
+8. Crie uma página com um elemento de texto qualquer identificado por um id e que, ao ser clicados, realizem os seguintes efeitos neste elemento como animações graduais:
+
+Aumente o tamanho da fonte e o valor da margem esquerda (para valores fixos)
+Aumente em 50 pixels a margem superior
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest8</title>
+    <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <p id="b">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+    Et voluptatem omnis at cupiditate temporibus, vitae veniam. Facere, molestiae nisi expedita quam aspernatur deleniti doloremque est laboriosam incidunt. Sint, eos natus.</p>
+    <script>
+        $("#b").on('click',function(){
+
+            $('#b').animate({
+            'margin-left': '200px',
+            'font-size': '30px',
+            'margin-top': '50px'
+            },'slow');
+
+        });
+        
+    </script>
+</body>
+</html>

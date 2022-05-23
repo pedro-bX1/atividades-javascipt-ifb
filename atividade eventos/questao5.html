@@ -1,0 +1,49 @@
+<!--
+5. Dado o seguinte código HTML:
+
+<!DOCTYPE html>
+    <body>
+    <h1>Programação para Internet 1</h1>
+    <p>Este é o primeiro parágrafo</p>
+    <p>Este é o segundo parágrafo</p>
+    <span id="ref1"></span><p>Este parágrafo deve ser removido (1)</p>
+
+    <div id="conteudo" style="border: 1px solid blueviolet">
+        <p>Este parágrafo deve ser removido (2) <span id="ref2">!</span> </p>
+        <p>Último parágrafo</p>
+    </div>
+
+    <button>Remover 1</button>
+    <button>Remover 2</button>
+</body>
+</html>
+
+Faça com que ao clicar em cada botão, seja removido o parágrado correspondente indicado no texto. Encontre os 
+elementos a serem removidos partindo das tag com id ref1 ou ref2.
+-->
+
+<!DOCTYPE html>
+    <body>
+    <h1>Programação para Internet 1</h1>
+    <p>Este é o primeiro parágrafo</p>
+    <p>Este é o segundo parágrafo</p>
+    <span id="ref1"></span><p id="d">Este parágrafo deve ser removido (1)</p>
+
+    <div id="conteudo" style="border: 1px solid blueviolet">
+        <p id="i">Este parágrafo deve ser removido (2) <span id="ref2">!</span> </p>
+        <p>Último parágrafo</p>
+    </div>
+    <script>
+    function remover(){
+        var el = document.getElementById( 'd' );
+        el.parentNode.removeChild( el );
+    }
+    function remover2(){
+        var el = document.getElementById( 'i' );
+        el.parentNode.removeChild( el );
+    }
+    </script>
+    <button id="btn1" onclick="remover()">Remover 1</button>
+    <button id="btn2" onclick="remover2()">Remover 2</button>
+</body>
+</html>

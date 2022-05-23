@@ -1,0 +1,19 @@
+<!--Crie um elemento HTML cujo texto seja modificado quando o cursor do mouse está sobre ele e volte ao texto original quando o cursor não estiver mais.
+-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <p id="paragrafo" onmousemove="funcao()">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Deserunt rerum dicta minima id at laudantium totam voluptatum excepturi eos illo nostrum sunt asperiores consequuntur, minus quidem. 
+            Perspiciatis culpa cumque commodi?</p>
+
+            <script>
+                function funcao() {
+                    document.getElementById("paragrafo").innerHTML = "Texto mudou!";
+                }
+            </script>
+
+    </body>
+</html>

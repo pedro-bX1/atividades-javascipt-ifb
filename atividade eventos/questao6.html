@@ -1,0 +1,24 @@
+<!--
+6 Crie uma página contendo um campo de texto e um outro elemento de conteúdo qualquer (por exemplo, uma tag <h1>).
+À medida que o usuário digitar qualquer conteúdo na caixa de texto, 
+esse mesmo conteúdo deve ser replicado em tempo real no outro elemento (utilize o evento onkeyup).
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quest6</title>
+    </head>
+    <body>
+        <input type="text" id="txt">
+        <div id="parag">Texto aqui</div>
+        
+        <script>
+        let text  = document.getElementById("txt");
+        let parag = document.getElementById("parag");
+
+        text.addEventListener("keyup", function(){
+            parag.innerText = this.value;
+        })
+        </script>
+    </body>
+</html>

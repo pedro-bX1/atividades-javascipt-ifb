@@ -1,0 +1,26 @@
+<!--4. Crie uma página HTML contendo um div e um botão. Faça com que, cada vez que o botão for criado, um novo parágrafo 
+seja adicionado contendo um texto diferente. 
+(Os possíveis textos podem vir, por exemplo, de um array, em que a cada clique é lido o próximo elemento do array).-->
+
+<!DOCTYPE html>
+<head>
+ <title>Quest4</title>
+</head>
+<body>
+ <div id="paragrafos">
+ <p id="primeirao" >
+    Esse é o primeiro parágrafo</p>
+ <p>Esse é o segundo paragrafo</p>
+ </div>
+ <button onclick="adiciona()">Adicionar</button>
+ <script>
+     function adiciona(){
+        let p = document.createElement('p');
+        let texto = document.createTextNode('Este é o 3 parágrafo');
+        p.appendChild(texto);
+        let div = document.getElementById('paragrafos');
+        div.appendChild(p);
+}
+ </script>
+</body>
+</html>
